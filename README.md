@@ -1,10 +1,11 @@
 # Install JDK 17
 
+```
 sudo apt update  
-
 sudo apt install openjdk-17-jdk
 
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+```
 
 # {{name}}
 
