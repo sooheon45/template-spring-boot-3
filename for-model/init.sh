@@ -3,6 +3,11 @@ sudo apt-get install net-tools
 sudo apt install iputils-ping
 pip install httpie
 
+sudo apt update
+sudo apt install openjdk-17-jdk
+
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 
