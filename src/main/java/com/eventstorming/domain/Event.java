@@ -21,7 +21,7 @@ public class {{namePascalCase}} extends AbstractEvent {
     {{#fieldDescriptors}}
     private {{{className}}} {{nameCamelCase}};
     {{/fieldDescriptors}}
-    {{#if (checkToppings options.rootModel.toppingPlatforms 'multitenancy')}}
+    {{#if (checkToppings options.rootModel.toppingPlatforms 'multitenancy-partitioned')}}
     private String tenantId;
     {{/if}}
 
