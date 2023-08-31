@@ -41,7 +41,7 @@ public class {{namePascalCase}} {{#checkExtends aggregateRoot.entities.relations
     {{#checkRelations ../aggregateRoot.entities.relations className isVO referenceClass}}{{/checkRelations}}
     private {{{className}}} {{nameCamelCase}};
     {{/aggregateRoot.fieldDescriptors}}
-    {{#if (checkToppings options.rootModel.toppingPlatforms 'multitenancy')}}
+    {{#if (checkToppings options.rootModel.toppingPlatforms 'multitenancy-partitioned')}}
     @TenantId
     private String tenantId;
     {{/if}}
