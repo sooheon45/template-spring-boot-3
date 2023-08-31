@@ -35,7 +35,7 @@ public class {{namePascalCase}} extends AbstractEvent {
     }
 }
 //>>> DDD / Domain Event
-<function>
+
 <function>
 window.$HandleBars.registerHelper('checkToppings', function (toppingPlatforms, checkTopping) {
     var hasToppings = false;
