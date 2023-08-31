@@ -14,7 +14,7 @@ import {{options.package}}.{{boundedContext.namePascalCase}}Application;
 import jakarta.persistence.*;
 import java.util.List;
 
-{{#if (checkToppings options.rootModel.toppingPlatforms 'multitenancy')}}
+{{#if (checkToppings options.rootModel.toppingPlatforms 'multitenancy-partitioned')}}
 import org.hibernate.annotations.TenantId;
 {{/if}}
 
