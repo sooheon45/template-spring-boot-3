@@ -6,7 +6,7 @@ except: {{contexts.isNotCQRS}}
 ---
 package {{options.package}}.domain;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.List;
 import java.util.Date;
 import lombok.Data;
