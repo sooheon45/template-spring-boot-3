@@ -5,7 +5,7 @@ mergeType: {{#mergeType _type}}{{/mergeType}}
 ---
 package {{options.package}}.domain;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import org.springframework.beans.BeanUtils;
 import java.util.List;
 import lombok.Data;
