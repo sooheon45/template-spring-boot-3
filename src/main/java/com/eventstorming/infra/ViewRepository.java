@@ -8,12 +8,12 @@ except: {{contexts.isNotCQRS}}
 package {{options.package}}.infra;
 
 import {{options.package}}.domain.*;
-import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import java.util.List;
 
 @RepositoryRestResource(collectionResourceRel="{{namePlural}}", path="{{namePlural}}")
-public interface {{namePascalCase}}Repository extends PagingAndSortingRepository<{{namePascalCase}}, Long> {
+public interface {{namePascalCase}}Repository extends JpaRepository<{{namePascalCase}}, Long> {
 
     {{#setFindBy updateRules namePascalCase}}{{/setFindBy}}
 
