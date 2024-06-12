@@ -35,7 +35,7 @@ public class AbstractEvent {
     }
 
     public void publish() {
-        StreamBridge streamBridge = OrderApplication.applicationContext.getBean(StreamBridge.class);
+        StreamBridge streamBridge = {{namePascalCase}}Application.applicationContext.getBean(StreamBridge.class);
 
         streamBridge.send("producer-out-0", MessageBuilder
                 .withPayload(this)
