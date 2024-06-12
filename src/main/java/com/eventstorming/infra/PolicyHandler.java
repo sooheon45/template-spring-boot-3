@@ -24,6 +24,7 @@ public class PolicyHandler{
             System.out.println("Discarded message: " + message);
         };
     }
+    {{#policies}}
     {{#relationEventInfo}}
     
     @Bean
@@ -34,5 +35,6 @@ public class PolicyHandler{
         };
     }
     {{/relationEventInfo}}
+    {{/policies}}
 }
 //>>> Clean Arch / Inbound Adaptor
