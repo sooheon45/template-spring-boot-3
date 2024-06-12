@@ -6,8 +6,7 @@ pip install httpie
 sudo apt update
 sudo apt install openjdk-17-jdk
 
-yes | sdk install java 17.0.7-open
-
+yes | sdk install java 17.0.7-tem
 
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 
