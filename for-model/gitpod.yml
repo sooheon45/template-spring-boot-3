@@ -5,3 +5,4 @@ tasks:
   - init: |
       nvm install 14.19.0 && 
       nvm use 14.19.0
+      yes | sdk install java 17.0.7-tem
