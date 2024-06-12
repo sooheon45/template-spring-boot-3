@@ -4,7 +4,6 @@ mergeType: template
 ---
 package {{options.package}}.infra;
 
-import {{options.package}}.config.kafka.KafkaProcessor;
 import {{options.package}}.domain.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;

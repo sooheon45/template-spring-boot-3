@@ -4,7 +4,6 @@ package {{options.package}}.infra;
 
 
 import {{options.package}}.{{namePascalCase}}Application;
-import {{options.package}}.config.kafka.KafkaProcessor;
 import lombok.Getter;
 import lombok.Setter;
 
