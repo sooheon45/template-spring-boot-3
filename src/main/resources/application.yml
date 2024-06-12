@@ -17,7 +17,9 @@ spring:
     name: {{toLowerCase name}}
 ---
 spring:
-  profiles: default
+  config:
+    activate:
+      on-profile: default
   jpa:
     properties:
       hibernate:
@@ -72,7 +74,9 @@ server:
 
 ---
 spring:
-  profiles: docker
+  config:
+    activate:
+      on-profile: docker
   jpa:
     properties:
       hibernate:
@@ -80,6 +84,8 @@ spring:
         format_sql: true
         implicit_naming_strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyComponentPathImpl
   cloud:
+    function:
+      routing-expression: {{#if policies}}"{{#policies}}{{#relationEventInfo}}headers['type']=='{{eventValue.namePascalCase}}' ? 'whenever{{eventValue.namePascalCase}}_{{../namePascalCase}}' : {{/relationEventInfo}}{{/policies}}'discardFunction'"{{else}}'discardFunction'{{/if}}
     stream:
       kafka:
         binder:
